@@ -1,0 +1,31 @@
+import tkinter
+
+canvas = tkinter.Canvas(width = 600, height = 400, bg="lightblue")
+canvas.pack(side= "left")
+
+def akcia():
+    r = scale_r.get()
+    g = scale_g.get()
+    b = scale_b.get()
+    farba = f"#{r:02x}{g:02x}{b:02x}"
+    canvas.config(bg=farba)
+    label.config(bg="yellow", text=farba)
+
+button = tkinter.Button(text="Stlac ma", command=akcia)
+button.pack()
+
+label = tkinter.Label(text="Label")
+label.pack()
+
+entry = tkinter.Entry(width=10)
+entry.pack()
+
+scale_r = tkinter.Scale(to=255, label="RED")
+scale_r.pack(side="right")
+scale_g = tkinter.Scale(to=255, label="GREEN")
+scale_g.pack(side="right")
+scale_b = tkinter.Scale(to=255, label="BLUE")
+scale_b.pack(side="right")
+
+
+tkinter.mainloop()

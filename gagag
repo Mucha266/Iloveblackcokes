@@ -1,0 +1,17 @@
+import tkinter
+
+canvas = tkinter.Canvas()
+canvas.pack()
+
+
+canvas.create_text(100, 100, text="emo barbora ma rada kristiana")
+
+canvas.create_rectangle(50, 50, 100, 100)  
+
+
+obr = tkinter.PhotoImage(file='/home/net.vazka.sk/michal.konecny/Stiahnuté/had03_34.png')
+canvas.create_image(300, 200, image=obr)
+
+
+
+tkinter.mainloop()
